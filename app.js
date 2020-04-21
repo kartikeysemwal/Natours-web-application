@@ -19,6 +19,8 @@ const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 
+app.enable('trust proxy'); //Heroku works by sending proxy this is for heroku
+
 app.set('view engine', 'pug'); //This is to set the template engine to pub
 app.set('views', path.join(__dirname, 'views'));
 

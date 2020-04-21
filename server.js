@@ -37,4 +37,9 @@ process.on('unhandledRejection', (err) => {
   });
 });
 
-// mongodb+srv://Kartikey:fBxHbCHQL56Vt2X4@cluster0-aoz7h.mongodb.net/test
+process.on('SIGTERM', () => {
+  console.log('SIGTERM RECEIVED. Shutting down gracefully.');
+  server.close(() => {
+    console.log('Process terminated');
+  });
+});
