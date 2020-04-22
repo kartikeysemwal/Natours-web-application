@@ -37,4 +37,3 @@ process.on('unhandledRejection', (err) => {
   });
 });
 
-// mongodb+srv://Kartikey:fBxHbCHQL56Vt2X4@cluster0-aoz7h.mongodb.net/test
